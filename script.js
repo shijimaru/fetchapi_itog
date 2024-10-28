@@ -1,8 +1,8 @@
 const weathere = document.getElementById('weather')
 
 async function getWeather() {
-    const latitude = 55.7558; // Широта Москвы
-    const longitude = 37.6173; // Долгота Москвы
+    const latitude = 55.7558;
+    const longitude = 37.6173;
     const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
     const data = await response.json();
     const weather = data.current_weather;
